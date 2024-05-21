@@ -26,10 +26,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AutoPatrolMovingPoint", meta = (EditCondition = "!AutoPatrolMovingPoint", ClampMin = "0", ClampMax = "20"))
 	float PatrolDelayTime = 0;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AutoPatrolMovingPoint", meta = (EditCondition = "!AutoPatrolMovingPoint", ClampMin = "0", ClampMax = "20"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AutoPatrolMovingPoint", meta = (EditCondition = "!AutoPatrolMovingPoint", ClampMin = "0", ClampMax = "31"))
 	int FirstPatrolMovingPointIndex = 0;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AutoPatrolMovingPoint", meta = (EditCondition = "!AutoPatrolMovingPoint", ClampMin = "0", ClampMax = "20"))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "AutoPatrolMovingPoint", meta = (EditCondition = "!AutoPatrolMovingPoint", ClampMin = "0", ClampMax = "31"))
 	int SecondPatrolMovingPointIndex = 0;
 
 protected:

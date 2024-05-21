@@ -77,4 +77,5 @@ public: // Return Moving Points What You Want
 	AActor* GetTopMovingPoint();
 	AActor* GetTopMovingPoint(int index);
 
+	int32 ExtractNumberFromName(const FString& Name, FString Prefix);
 };

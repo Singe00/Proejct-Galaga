@@ -23,6 +23,66 @@ void AEnemyManager::BeginPlay()
 	FindEnemyRightMovingPoints();
 	FindEnemyBottomMovingPoints();
 	FindEnemyTopMovingPoints();
+
+	auto InnerNameCompare = [this](const AActor& A, const AActor& B)
+		{
+			FString NameA = A.GetName();
+			FString NameB = B.GetName();
+
+			int32 NumA = ExtractNumberFromName(NameA,"BP_EnemyInnerMovingPoint_C_");
+			int32 NumB = ExtractNumberFromName(NameB,"BP_EnemyInnerMovingPoint_C_");
+
+			return NumA < NumB;
+		};
+
+	auto LeftNameCompare = [this](const AActor& A, const AActor& B)
+		{
+			FString NameA = A.GetName();
+			FString NameB = B.GetName();
+
+			int32 NumA = ExtractNumberFromName(NameA, "BP_EnemyLeftMovingPoint_C_");
+			int32 NumB = ExtractNumberFromName(NameB, "BP_EnemyLeftMovingPoint_C_");
+
+			return NumA < NumB;
+		};
+
+	auto RightNameCompare = [this](const AActor& A, const AActor& B)
+		{
+			FString NameA = A.GetName();
+			FString NameB = B.GetName();
+
+			int32 NumA = ExtractNumberFromName(NameA, "BP_EnemyRightMovingPoint_C_");
+			int32 NumB = ExtractNumberFromName(NameB, "BP_EnemyRightMovingPoint_C_");
+
+			return NumA < NumB;
+		};
+
+	auto TopNameCompare = [this](const AActor& A, const AActor& B)
+		{
+			FString NameA = A.GetName();
+			FString NameB = B.GetName();
+
+			int32 NumA = ExtractNumberFromName(NameA, "BP_EnemyTopMovingPoint_C_");
+			int32 NumB = ExtractNumberFromName(NameB, "BP_EnemyTopMovingPoint_C_");
+
+			return NumA < NumB;
+		};
+
+	auto BottomNameCompare = [this](const AActor& A, const AActor& B)
+		{
+			FString NameA = A.GetName();
+			FString NameB = B.GetName();
+
+			int32 NumA = ExtractNumberFromName(NameA, "BP_EnemyBottomMovingPoint_C_");
+			int32 NumB = ExtractNumberFromName(NameB, "BP_EnemyBottomMovingPoint_C_");
+
+			return NumA < NumB;
+		};
+	InnerMovingPoints.Sort(InnerNameCompare);
+	LeftMovingPoints.Sort(LeftNameCompare);
+	RightMovingPoints.Sort(RightNameCompare);
+	BottomMovingPoints.Sort(BottomNameCompare);
+	TopMovingPoints.Sort(TopNameCompare);
 }
 
 // Called every frame
@@ -225,4 +285,20 @@ AActor* AEnemyManager::GetTopMovingPoint()
 AActor* AEnemyManager::GetTopMovingPoint(int index)
 {
 	return TopMovingPoints[index];
+}
+
+
+int32 AEnemyManager::ExtractNumberFromName(const FString& Name,FString Prefix)
+{
+
+	// Ensure the name starts with the prefix
+	if (Name.StartsWith(Prefix))
+	{
+		// Extract the numeric part
+		FString NumberString = Name.Mid(Prefix.Len());
+		return FCString::Atoi(*NumberString);
+	}
+
+	// Return a default value if the name does not match the expected format
+	return 0;
 }
