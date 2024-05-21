@@ -1,6 +1,7 @@
 # Stellar Strike
-<br/>
 ![MainScreen-ezgif com-video-to-gif-converter](https://github.com/Singe00/Proejct-Galaga/assets/103260185/5971ee94-2a5f-4206-bf9f-1e1aca88125f)
+
+<br>
 
 ## Stellar Strike 배포 링크
 『[Stellar Strike 배포 링크](https://drive.google.com/drive/folders/14TQyNt1AWuRFjXg5Y4S1JHIw6rqdkxwm?usp=sharing) 』
@@ -98,7 +99,35 @@ Unreal C++과 게임수학을 접목해서 프로젝트를 진행했습니다.
 ![Enemy_Attack_Angle-ezgif com-video-to-gif-converter](https://github.com/Singe00/Proejct-Galaga/assets/103260185/d9191f39-683a-433a-b336-f4ba99fdc328)
 
 ## UI
+### 메인화면
 ![MainScreen-ezgif com-video-to-gif-converter](https://github.com/Singe00/Proejct-Galaga/assets/103260185/5971ee94-2a5f-4206-bf9f-1e1aca88125f)
+
+#### Start
+![image](https://github.com/Singe00/Proejct-Galaga/assets/103260185/32a614c6-9527-4c99-b901-3d44030a8657)
+
+#### Control
+![image](https://github.com/Singe00/Proejct-Galaga/assets/103260185/48ea14cb-9145-4b03-9228-6ffe719e3fb8)
+
+#### Info
+![image](https://github.com/Singe00/Proejct-Galaga/assets/103260185/46ca32b0-0eb6-4a28-a85e-3138fdf9f53d)
+
+#### Option
+![image](https://github.com/Singe00/Proejct-Galaga/assets/103260185/4d859856-3e78-4950-91a6-0bb0c21b3a46)
+
+#### Quit
+![image](https://github.com/Singe00/Proejct-Galaga/assets/103260185/9143864c-2b29-41ba-afe6-8410647e48eb)
+
+### 인게임
+![image](https://github.com/Singe00/Proejct-Galaga/assets/103260185/cc76739c-b441-4dd0-a8f8-fe3fc959cd63)
+
+### 일시정지
+![image](https://github.com/Singe00/Proejct-Galaga/assets/103260185/96160c0c-6dab-4d2b-9633-e94e7590ddf4)
+
+### 보스 처치
+![image](https://github.com/Singe00/Proejct-Galaga/assets/103260185/69d7e8e4-dc6f-4f00-8ada-a89742ba0437)
+
+### 사망
+![image](https://github.com/Singe00/Proejct-Galaga/assets/103260185/919e1cc4-9d09-40a2-aef6-0723b34bbee5)
 
 
 ## 기록
@@ -164,3 +193,5 @@ Project Galaga 개발 일지 시리즈 : 『[Project Galaga 구현 정리글](ht
 - 내용 : 제작한 게임의 제목 선정과 프로젝트 마무리
 - 자세한 내용은 『[Stellar Strike (完)](https://velog.io/@singery00/UE5-Project-Galaga-%E5%AE%8C)』 포스팅 참조
 
+## Assets
+Credit 참고
