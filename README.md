@@ -1,6 +1,6 @@
 # Stellar Strike
 <br/>
-![MainScreen-ezgif com-video-to-gif-converter](https://github.com/Singe00/Proejct-Galaga/assets/103260185/7d46a2ca-9ac9-4a42-bb62-748ed24480dc)
+![MainScreen-ezgif com-video-to-gif-converter](https://github.com/Singe00/Proejct-Galaga/assets/103260185/5971ee94-2a5f-4206-bf9f-1e1aca88125f)
 
 ## Stellar Strike 배포 링크
 『[Stellar Strike 배포 링크](https://drive.google.com/drive/folders/14TQyNt1AWuRFjXg5Y4S1JHIw6rqdkxwm?usp=sharing) 』
@@ -97,6 +97,9 @@ Unreal C++과 게임수학을 접목해서 프로젝트를 진행했습니다.
 #### 8. 각도형 (Angle)
 ![Enemy_Attack_Angle-ezgif com-video-to-gif-converter](https://github.com/Singe00/Proejct-Galaga/assets/103260185/d9191f39-683a-433a-b336-f4ba99fdc328)
 
+## UI
+![MainScreen-ezgif com-video-to-gif-converter](https://github.com/Singe00/Proejct-Galaga/assets/103260185/5971ee94-2a5f-4206-bf9f-1e1aca88125f)
+
 
 ## 기록
 Project Galaga 개발 일지 시리즈 : 『[Project Galaga 구현 정리글](https://velog.io/@singery00/series/Project-Galaga)』
@@ -118,52 +121,46 @@ Project Galaga 개발 일지 시리즈 : 『[Project Galaga 구현 정리글](ht
 - 자세한 내용은 『[Project Galaga (4)](https://velog.io/@singery00/UE5-Project-Galaga-4)』 포스팅 참조
 
 #### 5. Enemy FSM / 움직임 패턴 6가지 설계 및 구현✔
-- 내용 : 적의 6가지 움직임 패턴 구현 내용
+- 내용 : [적의 6가지 움직임 패턴 구현 내용](#적-움직임-패턴-6가지)
 - 자세한 내용은 『[Project Galaga (5)](https://velog.io/@singery00/UE5-Project-Galaga-5)』 포스팅 참조
 
 #### 6. Enemy FSM / 공격 패턴 8가지 설계 및 구현✔
-- 내용 : [적의 7가지 공격 패턴 구현 내용](###적-공격-패턴-8가지)
+- 내용 : [적의 7가지 공격 패턴 구현 내용](#적-공격-패턴-8가지)
 - 자세한 내용은 『[Project Galaga (6)](https://velog.io/@singery00/UE5-Project-Galaga-6)』 포스팅 참조
 
 #### 7. 적 베이스 클래스를 상속한 Boss 베이스 클래스 제작 및 행동 패턴 변경 로직 구현✔
-- 내용 : 
+- 내용 : 패턴을 저장할 구조체 설계 및 배열 생성 후 패턴 변화 감시
 - 자세한 내용은 『[Project Galaga (7)](https://velog.io/@singery00/UE5-Project-Galaga-7)』 포스팅 참조
 
 #### 8. 플레이어, 적 피격 시스템 구현✔
-- 내용 : 
+- 내용 : Overlap Event 발생 시 ApplyDamage() 및 TakeDamage() 호출로 피격 시스템 구현
 - 자세한 내용은 『[Project Galaga (8)](https://velog.io/@singery00/UE5-Project-Galaga-8)』 포스팅 참조
 
 #### 9. 플레이어, 적 총알 오브젝트 풀링 구현✔
-- 내용 : 
+- 내용 : Object Pool을 생성해 퍼포먼스 향상
 - 자세한 내용은 『[Project Galaga (9)](https://velog.io/@singery00/UE5-Project-Galaga-9)』 포스팅 참조
 
-#### 10. 플레이어 추가 기능(폭탄, 필살기) 설계 및 구현✔
-- 내용 : 
+#### 10. 플레이어 추가 기능 설계 및 구현✔
+- 내용 : 플레이어의 폭탄, 필살기 구현
 - 자세한 내용은 『[Project Galaga (10)](https://velog.io/@singery00/UE5-Project-Galaga-10)』 포스팅 참조
 
 #### 11. 아이템 및 플레이어 업그레이드 설계 및 구현✔
-- 내용 : 
+- 내용 : 플레이어 업그레이드 아이템 이동, 효과, 애니메이션 구현 및 적 처치 시 생성 로직
 - 자세한 내용은 『[Project Galaga (11)](https://velog.io/@singery00/UE5-Project-Galaga-11)』 포스팅 참조
 
 #### 12. 이펙트 및 사운드 작업✔
-- 내용 : 
+- 내용 : BlueprintNativeEvent를 사용한 이펙트 및 사운드 작업
 - 자세한 내용은 『[Project Galaga (12)](https://velog.io/@singery00/UE5-Project-Galaga-12)』 포스팅 참조
 
 #### 13. 위젯 작업✔
-- 내용 : 
+- 내용 : 인게임 위젯 작업
 - 자세한 내용은 『[Project Galaga (13)](https://velog.io/@singery00/UE5-Project-Galaga-13)』 포스팅 참조
 
 #### 14. 데이터 세이브 및 로드 구현 / 위젯 연동✔
-- 내용 : 
+- 내용 : 저장할 데이터에 대한 SaveStage Class 생성 및 데이터 세이브 로드, 또한 화면 모드, 해상도, 사운드 조절 적용 구현
 - 자세한 내용은 『[Project Galaga (14)](https://velog.io/@singery00/UE5-Project-Galaga-14)』 포스팅 참조
   
 #### 15. 게임 이름 선정 및 프로젝트 마무리✔
 - 내용 : 제작한 게임의 제목 선정과 프로젝트 마무리
 - 자세한 내용은 『[Stellar Strike (完)](https://velog.io/@singery00/UE5-Project-Galaga-%E5%AE%8C)』 포스팅 참조
-
-
-
-## 이슈
-- 2024.04.25(목)<br/>
-  언리얼 프로젝트, Github, Git 연동 완료<br/>
 
