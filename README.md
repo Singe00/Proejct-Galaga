@@ -2,6 +2,7 @@
 ![MainScreen-ezgif com-video-to-gif-converter](https://github.com/Singe00/Proejct-Galaga/assets/103260185/5971ee94-2a5f-4206-bf9f-1e1aca88125f)
 
 ## Stellar Strike 배포 링크
+Windows10, 11 환경에서 플레이 가능
 『[Stellar Strike 배포 링크](https://drive.google.com/file/d/1KfGpjc2eeZ79BqNUt__QAeNrfkdEJ6so/view?usp=sharing) 』
 
 ## 프로젝트 소개
