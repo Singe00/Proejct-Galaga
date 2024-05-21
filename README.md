@@ -4,7 +4,7 @@
 ## Stellar Strike 배포 링크
 Windows10, 11 환경에서 플레이 가능
 <br>
-『[Stellar Strike 배포 링크](https://drive.google.com/file/d/1KfGpjc2eeZ79BqNUt__QAeNrfkdEJ6so/view?usp=sharing) 』
+『[Stellar Strike 배포 링크](https://drive.google.com/file/d/1vUdty_V0uJ3fogYXysmPFYyo2XHUIt6R/view?usp=sharing) 』
 
 ## 프로젝트 소개
 Unreal C++과 게임수학을 접목해서 프로젝트를 진행했습니다.
