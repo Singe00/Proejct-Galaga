@@ -1,8 +1,6 @@
 # Stellar Strike
 ![MainScreen-ezgif com-video-to-gif-converter](https://github.com/Singe00/Proejct-Galaga/assets/103260185/5971ee94-2a5f-4206-bf9f-1e1aca88125f)
 
-<br>
-
 ## Stellar Strike 배포 링크
 『[Stellar Strike 배포 링크](https://drive.google.com/drive/folders/14TQyNt1AWuRFjXg5Y4S1JHIw6rqdkxwm?usp=sharing) 』
 
