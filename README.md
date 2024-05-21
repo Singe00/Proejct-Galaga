@@ -57,6 +57,7 @@ Unreal C++과 게임수학을 접목해서 프로젝트를 진행했습니다.
 
 
 #### 5. 무작위형 (Random)
+![Enemy_Move_Random-ezgif com-video-to-gif-converter](https://github.com/Singe00/Proejct-Galaga/assets/103260185/6cbd2f03-3bc5-49f0-97a1-a33833b71cd1)
 
 
 #### 6. 출입형 (InOut)
@@ -88,6 +89,7 @@ Unreal C++과 게임수학을 접목해서 프로젝트를 진행했습니다.
 
 
 #### 7. 파도형 (Wave)
+![Enemy_Attack_Wave-ezgif com-video-to-gif-converter](https://github.com/Singe00/Proejct-Galaga/assets/103260185/3501c477-5433-4380-839d-be15e783e6e2)
 
 
 #### 8. 각도형 (Angle)
