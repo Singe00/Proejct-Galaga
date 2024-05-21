@@ -3,6 +3,7 @@
 
 ## Stellar Strike 배포 링크
 Windows10, 11 환경에서 플레이 가능
+<br>
 『[Stellar Strike 배포 링크](https://drive.google.com/file/d/1KfGpjc2eeZ79BqNUt__QAeNrfkdEJ6so/view?usp=sharing) 』
 
 ## 프로젝트 소개
