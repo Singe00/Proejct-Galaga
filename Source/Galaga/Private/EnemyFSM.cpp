@@ -341,7 +341,7 @@ void UEnemyFSM::TargetAttack()
 
 	AEnemyBullet* bullet = me->bulletPool->SpawnPooledObject(me->GetActorLocation(), rotation);
 }
-
+// 원을 그리며 360도로 확산 발사
 void UEnemyFSM::SpreadAttack()
 {
 	if (!GetIsMoving())
@@ -361,7 +361,7 @@ void UEnemyFSM::SpreadAttack()
 	}
 
 }
-
+// 360도로 원형으로 총알을 발사
 void UEnemyFSM::OrbitAttack()
 {
 	// 각도
@@ -386,7 +386,7 @@ void UEnemyFSM::OrbitAttack()
 	}
 
 }
-
+// Sweep By Single Channel을 사용하여 즉발형 공격 구현
 void UEnemyFSM::LaserAttack()
 {
 	FVector StartPos = me->GetActorLocation();
@@ -413,7 +413,7 @@ void UEnemyFSM::LaserAttack()
 		}
 	}
 }
-
+// 전방 기준 Max Angle을 Bullet Count만큼 분할하여 총알 발사
 void UEnemyFSM::AngleAttack()
 {
 	double angleBetweenBullets = 130.0/me->GetBulletCount();
@@ -433,7 +433,7 @@ void UEnemyFSM::AngleAttack()
 		AEnemyBullet* bullet = me->bulletPool->SpawnPooledObject(spawnLocation, bulletRotation);
 	}
 }
-
+// Sin 그래프 모양으로 총알이 발사
 void UEnemyFSM::WaveAttack()
 {
 	if (!GetIsMoving())

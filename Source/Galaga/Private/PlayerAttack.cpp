@@ -79,8 +79,8 @@ void UPlayerAttack::FireBullet(float DeltaTime)
 
 		AttackSpeedTimer = 0.0f;
 	}
-
 }
+
 void UPlayerAttack::FireUlt()
 {
 	FVector StartPos = me->GetActorLocation() + FVector(200.0f, 0, 0);
