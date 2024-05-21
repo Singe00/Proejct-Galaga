@@ -1,6 +1,6 @@
 # Stellar Strike
 <br/>
-<img width="344" alt="Project Galaga" src="https://github.com/Singe00/Proejct-Galaga/assets/103260185/7e186ca3-cfe8-4690-9755-1f3a4901d898">
+![MainScreen-ezgif com-video-to-gif-converter](https://github.com/Singe00/Proejct-Galaga/assets/103260185/7d46a2ca-9ac9-4a42-bb62-748ed24480dc)
 
 ## Stellar Strike 배포 링크
 『[Stellar Strike 배포 링크](https://drive.google.com/drive/folders/14TQyNt1AWuRFjXg5Y4S1JHIw6rqdkxwm?usp=sharing) 』
