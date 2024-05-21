@@ -2,7 +2,7 @@
 ![MainScreen-ezgif com-video-to-gif-converter](https://github.com/Singe00/Proejct-Galaga/assets/103260185/5971ee94-2a5f-4206-bf9f-1e1aca88125f)
 
 ## Stellar Strike 배포 링크
-『[Stellar Strike 배포 링크](https://drive.google.com/drive/folders/14TQyNt1AWuRFjXg5Y4S1JHIw6rqdkxwm?usp=sharing) 』
+『[Stellar Strike 배포 링크](https://drive.google.com/file/d/1KfGpjc2eeZ79BqNUt__QAeNrfkdEJ6so/view?usp=sharing) 』
 
 ## 프로젝트 소개
 Unreal C++과 게임수학을 접목해서 프로젝트를 진행했습니다.
