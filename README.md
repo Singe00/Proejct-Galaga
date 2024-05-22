@@ -17,8 +17,9 @@ Unreal C++과 게임수학을 접목해서 프로젝트를 진행했습니다.
 
 ## 플레이 영상
 
-[플레이 영상](추후 링크 추가)
+『[플레이 영상](https://youtu.be/c36RQacTndk?si=ut4g8ub7ehsI0lEU)』
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/c36RQacTndk?si=ut4g8ub7ehsI0lEU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## 개발 환경
 - Windows 11 (64bits)
