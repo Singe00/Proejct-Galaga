@@ -190,4 +190,7 @@ Project Galaga 개발 일지 시리즈 : 『[Project Galaga 구현 정리글](ht
 
 
 ## Assets
-Credit 참고
+『[Credit 영상 참고](https://youtu.be/8XjtXIVbm_w?si=TC2ULiOicKtKm8wr)』
+
+
+ <iframe width="560" height="315" src="https://www.youtube.com/embed/8XjtXIVbm_w?si=TC2ULiOicKtKm8wr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
