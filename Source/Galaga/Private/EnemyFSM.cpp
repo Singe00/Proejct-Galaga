@@ -38,12 +38,12 @@ void UEnemyFSM::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
-	// ...
-
+	// FSM 활성화 시 실행
 	if (me->GetIsActiveFSM())
 	{
+		// 상태전환 시간 누적합
 		currentTime += DeltaTime;
-
+		// 주시 패턴
 		switch (me->GetIsFocusPlayer())
 		{
 		case EEnemyFocus::Player:
@@ -68,7 +68,7 @@ void UEnemyFSM::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 			break;
 		}
 
-
+		// 상태 전환
 		switch (mState)
 		{
 		case EEnemyState::IDLE:
@@ -89,7 +89,7 @@ void UEnemyFSM::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 	}
 }
 
-void UEnemyFSM::IdleState()
+void UEnemyFSM::IdleState()		// 대기 상태
 {
 	if (currentTime >= me->GetIdleDelayTime())
 	{
@@ -99,9 +99,9 @@ void UEnemyFSM::IdleState()
 
 }
 
-void UEnemyFSM::MoveState()
+void UEnemyFSM::MoveState()		// 움직임 상태
 {
-
+	// 움직임 패턴
 	switch (me->GetMType())
 	{
 	case EEnemyType::Suiside:
@@ -132,9 +132,11 @@ void UEnemyFSM::MoveState()
 	}
 }
 
-void UEnemyFSM::AttackState()
+void UEnemyFSM::AttackState()	// 공격 상태
 {
+	// 총알 발사 시 사운드
 	me->FireSound();
+	// 공격 패턴
 	switch (me->GetMAttackType())
 	{
 	case EEnemyAttackType::Suiside:
@@ -450,9 +452,11 @@ void UEnemyFSM::WaveAttack()
 		FRotator bulletSpawnRotation = me->GetActorRotation();
 
 		// 총알이 나갈 위치를 계산합니다.
+		// 삼각함수에 값을 곱해 진폭을 조절하고, 평행이동으로 2쌍의 파동이 나가도록 구현
 		FVector bulletSpawnLocationLeft = me->GetActorLocation() + FVector(0, (FMath::Sin(angleInRadians) * amplitude)+me->GetWaveRange(), 0);
 		FVector bulletSpawnLocationRight = me->GetActorLocation() + FVector(0, (FMath::Sin(angleInRadians) * amplitude)- me->GetWaveRange(), 0);
 
+		// 각도 설정
 		AEnemyBullet* bulletLeft = me->bulletPool->SpawnPooledObject(bulletSpawnLocationLeft, bulletSpawnRotation);
 		AEnemyBullet* bulletRight = me->bulletPool->SpawnPooledObject(bulletSpawnLocationRight, bulletSpawnRotation);
 

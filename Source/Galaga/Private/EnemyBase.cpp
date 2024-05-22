@@ -147,7 +147,7 @@ FVector AEnemyBase::GetDirectionToTargetMovingPoint(float index)
 		dir.Normalize();
 		return dir;
 	}
-	return FVector::ZeroVector;
+	return FVector(1,1,1);
 }
 
 void AEnemyBase::FireSound_Implementation()

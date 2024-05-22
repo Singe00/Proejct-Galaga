@@ -14,36 +14,36 @@
 UENUM(BlueprintType)
 enum class EEnemyType : uint8
 {
-	Suiside,
-	Patrol,
-	Fixed,
-	PassBy,
-	Random,
-	InOut,
+	Suiside,	// 자폭형
+	Patrol,		// 순회형
+	Fixed,		// 고정형
+	PassBy,		// 패스형
+	Random,		// 무작위형
+	InOut,		// 출입형
 };
 
 UENUM(BlueprintType)
 enum class EEnemyAttackType : uint8
 {
-	Suiside,
-	Front,
-	Target,
-	Spread,
-	Orbit,
-	Laser,
-	Wave,
-	Angle,
+	Suiside,	// 자폭형
+	Front,		// 전방형
+	Target,		// 대상형
+	Spread,		// 확산형
+	Orbit,		// 궤도형
+	Laser,		// 즉발형 
+	Wave,		// 파도형
+	Angle,		// 각도형
 };
 
 UENUM(BlueprintType)
 enum class EEnemyFocus : uint8
 {
-	Player,
-	TargetMP,
-	Front,
-	Back,
-	Center,
-	PlayerOnce,
+	Player,		// 플레이어 주시
+	TargetMP,	// 목표 MP 주시
+	Front,		// 전방 주시
+	Back,		// 후방 주시
+	Center,		// 중앙 주시
+	PlayerOnce,	// 플레이어 1회 주시
 };
 
 UCLASS()
@@ -75,63 +75,67 @@ protected: // Components
 
 
 public: // FSM
+	// FSM 액터 컴포넌트
 	UPROPERTY(VisibleAnywhere,BlueprintReadWrite, Category = FSM)
 	class UEnemyFSM* fsm;
-
+	// 활성화 여부
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = FSM)
 	bool isActiveFSM = false;
-
+	// 활성화 타입 시간 or 의존 대상
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = FSM)
 	bool isActiveByTime = true;
-
+	// 활성화 시간 경과 시 FSM 활성화
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = FSM, meta = (EditCondition = "isActiveByTime"))
 	float FSMActiveTime = 10.0f;
 
-
+	// 의존 대상 사망 시 FSM 활성화
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = FSM, meta = (EditCondition = "!isActiveByTime"))
 	AActor* dependencyEnemy = nullptr;
 
+	// 출입 움직임 패턴 대기 시간
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = FSM)
 	float InOutDelayTime = 1.0f;
 
 protected: // Enemy Stat
+	// 체력
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = EnemyStat, meta = (AllowPrivateAccess = "true"))
 	float EnemyHp = 3.0f;
-
+	// 최대 체력
 	UPROPERTY(EditAnywhere, Category = EnemyStat)
 	float EnemyMaxHp = 3.0f;
-
+	// 이동속도
 	UPROPERTY(EditAnywhere, Category = EnemyStat)
 	float EnemySpeed = 750.0f;
-
+	// 공격속도
 	UPROPERTY(EditAnywhere, Category = EnemyStat)
 	float EnemyAttackSpeed = 1.5f;
-
+	// 움직임 패턴
 	UPROPERTY(EditAnywhere, Category = EnemyStat)
 	EEnemyType mType;
-
+	// 공격패턴
 	UPROPERTY(EditAnywhere, Category = EnemyStat)
 	EEnemyAttackType mAttackType;
-
+	// 대기시간
 	float IdleDelayTime = 0;
 
-
+	// 점수
 	UPROPERTY(EditAnywhere, Category = EnemyStat)
 	int scorePoint = 50;
 
 public: // Else
+	// 주시 패턴
 	UPROPERTY(EditAnywhere, Category = FSM)
 	EEnemyFocus isFocusPlayer = EEnemyFocus::Front;
-
+	// 아이템 드랍 여부
 	UPROPERTY(EditAnywhere, Category = SpawnItem)
 	bool isSpawnItemWhenDie = false;
-
+	// 아이템 공장
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = SpawnItem, meta = (EditCondition = "isSpawnItemWhenDie"))
 	TSubclassOf<class AItem> SpawnItem;
-
+	// 파도 공격 패턴 진폭값
 	UPROPERTY(EditAnywhere, Category = EnemyStat, meta = (EditCondition = "mAttackType == EEnemyAttackType::Wave", ClampMin = "300", ClampMax = "800"))
 	float WaveRange = 300;
-
+	// 각도 공격 패턴 총알 개수
 	UPROPERTY(EditAnywhere, Category = EnemyStat, meta = (EditCondition = "mAttackType == EEnemyAttackType::Angle", ClampMin = "3", ClampMax = "13"))
 	float BulletCount = 3;
 
@@ -186,35 +190,39 @@ public: // Setter
 protected: // Function
 	UFUNCTION()
 	void OnComponentBeginOverlap (UPrimitiveComponent* OverlappedComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult& SweepResult);
-
+	// 피격 함수
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
-
+	// 적 외형 동적 할당 함수
 	void SetEnemyBodyMesh(FString EnemyBodyPath);
-
+	// 아이템 드랍 함수
 	void SpawnPlayerItem();
 
 
 protected: // MovingPoints
+	// 대상 무빙포인트
 	UPROPERTY(EditAnywhere, Category = MovingPoint)
 	TArray<class AActor*> TargetMovingPoints;
+	// 대상 무빙포인트 인덱스
 	UPROPERTY(VisibleAnywhere, Category = MovingPoint)
 	int enemyTargetMovingPointIndex = 0;
 
 public:
+	// 목표 무빙포인트 방향 얻기
 	FVector GetDirectionToTargetMovingPoint(float index);
 	
 public:
+	// 총알 Object Pool
 	UPROPERTY(VisibleAnywhere,Category="EnemyBulletPool")
 	AEnemyBulletPool* bulletPool;
 
-public:
-
+public: // 이펙트
+	// 레이저 이펙트
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "LaserEffect")
 	void laserEffect();
-
+	// 사망 시 폭팔 이펙트
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "Detroying")
 	void DestroyingEnemy();
-
+	// 총알 발사 소리
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "FireSound")
 	void FireSound();
 };

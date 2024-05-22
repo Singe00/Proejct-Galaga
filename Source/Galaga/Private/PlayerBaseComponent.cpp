@@ -9,7 +9,7 @@ void UPlayerBaseComponent::BeginPlay()
 {
 	Super::BeginPlay();
 
-	// ...
+	// 소유자 초기화
 	me = Cast<AMyPlayer>(GetOwner());
 }
 

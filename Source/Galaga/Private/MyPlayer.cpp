@@ -34,7 +34,6 @@ AMyPlayer::AMyPlayer()
 	PlayerBodyCollision->SetCollisionProfileName(TEXT("BlockAll"));
 
 	PlayerBulletPool = CreateDefaultSubobject<UPlayerBulletPool>(TEXT("PlayerBulletPool"));
-
 	PlayerMove = CreateDefaultSubobject<UPlayerMove>(TEXT("PlayerMove"));
 	PlayerAttack = CreateDefaultSubobject<UPlayerAttack>(TEXT("PlayerAttack"));
 }
@@ -99,26 +98,33 @@ void AMyPlayer::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 void AMyPlayer::Boom()
 {
+	// 폭탄 개수가 남았고 && 쿨타임이 아니라면
 	if (PlayerBoomCount > 0 && !isBoomCool)
 	{
+		// 폭탄 이펙트 함수 > 블루프린트로 작업
 		PlayerBoomEffect();
-
+		// 폭탄 쿨타임
 		isBoomCool = true;
-
+		// 폭탄 개수 1 감소
 		PlayerBoomCount -= 1;
 
+		// 레벨에 배치된 적 총알 오브젝트 풀을 찾는다.
 		auto pool = UGameplayStatics::GetActorOfClass(GetWorld(), AEnemyBulletPool::StaticClass());
 
+		// 풀이 있다면
 		if (pool)
 		{
+			// 풀을 순회하며
 			AEnemyBulletPool* enemyBulletPool = Cast<AEnemyBulletPool>(pool);
-
+			// 예외처리
 			if (enemyBulletPool != nullptr)
 			{
+				// 비활성화 해준다.
 				enemyBulletPool->DeactiveAllBullets();
 			}
 		}
 
+		// 5초 후 폭탄 사용가능
 		FTimerHandle CanUseBoom;
 		GetWorldTimerManager().SetTimer(CanUseBoom, this, &AMyPlayer::setCanUseBoom, 5.0f, false);
 	}

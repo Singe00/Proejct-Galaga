@@ -26,8 +26,10 @@ protected:
 
 public:	
 
+	// 소유자
 	UPROPERTY()
 	AMyPlayer* me;
 
+	// 가상함수 생성
 	virtual void SetupInputBinding(class UInputComponent* PlayerInputComponent) {};
 };
